@@ -40,14 +40,72 @@ body {
 	font-size: 5rem;
 	font-weight: bold;
 	text-align: center;
+	&:before {
+		display: inline-block;
+		position: absolute;
+		left:320px;
+		top: 120px;
+		content:'';
+		background-image: url('../img/triangle.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 25px;
+		height: 25px;
+	}
+	&:after {
+		display: inline-block;
+		position: absolute;
+		left:900px;
+		top:10px;
+		content:'';
+		background-image: url('../img/cross.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 25px;
+		height: 25px;
+	}
 }
 
 .container{
-	/* width: 450px; */
 	height: 300px;
 	margin: 0 auto;	
-	background-color: #fff;	
+	background-color: #fff;
+	position: relative;	
+	&__substrate{
+		position: absolute;	
+		left: 0;	
+		right: 0;	
+		top: 0;	
+		width: calc(100% - 40px);	
+		height: 100%;	
+		background-color: rgba(26, 221, 164, .9);
+		padding: 20px;
+		display: flex;	
+		flex-direction: column;
+		justify-content: flex-end;			
+		opacity:0;
+		h2{
+			color:white;
+			font-size: 	2rem;
+			font-weight: 	200;
+			text-transform: uppercase;	
+		}
+		p{
+			color:white;
+			font-size: 	1rem;
+			font-weight: 	100;
+			text-transform: uppercase;	
+		}
+		&:hover,
+		&:focus,
+		&:active{
+		opacity: .8;
+		}
+	}
 }
+
 img{	
 	height: 300px;
 }

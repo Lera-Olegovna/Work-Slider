@@ -423,12 +423,68 @@ body {
   font-size: 5rem;
   font-weight: bold;
   text-align: center; }
+  .title:before {
+    display: inline-block;
+    position: absolute;
+    left: 320px;
+    top: 120px;
+    content: '';
+    background-image: url("../img/triangle.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px; }
+  .title:after {
+    display: inline-block;
+    position: absolute;
+    left: 900px;
+    top: 10px;
+    content: '';
+    background-image: url("../img/cross.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px; }
 
 .container {
-  /* width: 450px; */
   height: 300px;
   margin: 0 auto;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative; }
+  .container__substrate {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: calc(100% - 40px);
+    height: 100%;
+    background-color: rgba(26, 221, 164, 0.9);
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    opacity: 0; }
+    .container__substrate h2 {
+      color: white;
+      font-size: 2rem;
+      font-weight: 200;
+      text-transform: uppercase; }
+    .container__substrate p {
+      color: white;
+      font-size: 1rem;
+      font-weight: 100;
+      text-transform: uppercase; }
+    .container__substrate:hover, .container__substrate:focus, .container__substrate:active {
+      opacity: .8; }
 
 img {
   height: 300px; }
